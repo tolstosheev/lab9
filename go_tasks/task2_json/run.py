@@ -11,6 +11,7 @@ def run_go_program(input_data: dict) -> dict:
         input=input_json,
         capture_output=True,
         text=True,
+        encoding='UTF-8'
     )
 
     if result.returncode != 0:
