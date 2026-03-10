@@ -1,10 +1,23 @@
-# Python
+# --- Python ---
+.venv/
 __pycache__/
 *.py[cod]
-
-# Executables
-*.exe
-processor
-
-# Pytest
 .pytest_cache/
+.tox/
+.coverage
+htmlcov/
+*.egg-info/
+
+# --- Rust / Cargo ---
+target/
+Cargo.lock
+
+.maturin/
+*.whl
+.rustc_info.json
+
+# --- ОС и IDE ---
+.DS_Store
+.vscode/
+.idea/
+Thumbs.db
