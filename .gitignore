@@ -1,0 +1,10 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Executables
+*.exe
+processor
+
+# Pytest
+.pytest_cache/
