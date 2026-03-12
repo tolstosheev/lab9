@@ -1,0 +1,6 @@
+Benchmark Results (Matrix Size: 100x100)
+Iterations: 3
+
+Python: 0.0888s (mean)
+Python+Rust: FAILED
+Python+Go: 0.0160s (mean)
