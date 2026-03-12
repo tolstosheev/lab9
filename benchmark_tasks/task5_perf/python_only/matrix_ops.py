@@ -1,4 +1,7 @@
 def matrix_multiply(a: list[list[float]], b: list[list[float]]) -> list[list[float]]:
+    if not a or not b or len(a) == 0:
+        return []
+    
     rows_a, cols_a = len(a), len(a[0])
     rows_b, cols_b = len(b), len(b[0])
     
@@ -15,6 +18,9 @@ def matrix_multiply(a: list[list[float]], b: list[list[float]]) -> list[list[flo
     return result
 
 def matrix_transpose(matrix: list[list[float]]) -> list[list[float]]:
+    if not matrix or len(matrix) == 0:
+        return []
+    
     rows, cols = len(matrix), len(matrix[0])
     return [[matrix[i][j] for i in range(rows)] for j in range(cols)]
 
