@@ -21,7 +21,7 @@ def assert_matrix_approx(actual, expected, rel=1e-7):
 
 def get_expected_heavy(n: int) -> float:
     if n <= 0: return 0.0
-    # Простой расчет для теста
+
     a = [[float(i + j) for j in range(n)] for i in range(n)]
     b = [[float(i * j + 1) for j in range(n)] for i in range(n)]
     res = [[sum(a[i][k] * b[k][j] for k in range(n)) for j in range(n)] for i in range(n)]
@@ -81,7 +81,6 @@ def go_mod(go_server):
 
     return {"multiply": multiply, "transpose": transpose, "heavy": compute_heavy}
 
-# --- ТЕСТЫ ---
 
 class TestCorrectness:
     @pytest.mark.parametrize("n", [0, 1, 5])
@@ -100,7 +99,7 @@ class TestCorrectness:
 
 class TestEdgeCases:
     def test_python_empty(self, python_mod):
-        # Python теперь возвращает [], а не падает
+        
         assert python_mod["multiply"]([], []) == []
         assert python_mod["transpose"]([]) == []
 
